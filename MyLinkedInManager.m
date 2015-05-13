@@ -8,9 +8,9 @@
 
 #import "MyLinkedInManager.h"
 #import "DataObjects.h"
-#define REDIRECTURL @"https://netceedacceptredirect"
-#define CLIENTID @"75dpbdlzo93bm6"
-#define CLIENTSECRET @"K9xRESYRfb8KXvRT"
+#define REDIRECTURL @"Paste here REDIRECTURL"
+#define CLIENTID @"Paste here CLIENTID"
+#define CLIENTSECRET @"Paste here CLIENTSECRET"
 
 @implementation MyLinkedInManager
 
@@ -121,8 +121,8 @@ static MyLinkedInManager *myLinkedInManager = nil;
 }
 
 - (LIALinkedInHttpClient *)client {
-    LIALinkedInApplication *application = [LIALinkedInApplication applicationWithRedirectURL:@"https://netceedacceptredirect"                                                                                           clientId:@"75dpbdlzo93bm6"
-                                                                                clientSecret:@"K9xRESYRfb8KXvRT"
+    LIALinkedInApplication *application = [LIALinkedInApplication applicationWithRedirectURL:REDIRECTURL                                                                                           clientId:CLIENTID
+                                                                                clientSecret:CLIENTSECRET
                                                                                        state:@"DCEEFWF45453sdffef424"
                                                                                grantedAccess:@[@"w_share"]];
     return [LIALinkedInHttpClient clientForApplication:application presentingViewController:nil];
